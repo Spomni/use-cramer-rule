@@ -1,0 +1,15 @@
+{
+  "name": "use-cramer-rule",
+  "version": "0.0.0",
+  "description": "Solve a system of linear algebraic equations by Cramer's rule",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "spomni",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
+}
