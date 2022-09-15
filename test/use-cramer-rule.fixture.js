@@ -29,6 +29,37 @@ const notMatrixOfNumbersArray = [
   ]
 ]
 
+const notAugmentedMatrixArray = [
+  [
+    [0]
+  ],
+  [
+    [0, 0, 0]
+  ],
+  [
+    [0],
+    [0],
+    [0],
+  ],
+  [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+  ],
+  [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
+  ],
+  [
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+  ]
+]
+
 function assertThrowsCustomTypeError(func) {
   
   assert.throws(func, TypeError)
@@ -46,5 +77,7 @@ function assertThrowsCustomTypeError(func) {
 module.exports = {
   notMatrixArray,
   notMatrixOfNumbersArray,
+  notAugmentedMatrixArray,
+
   assertThrowsCustomTypeError,
 }

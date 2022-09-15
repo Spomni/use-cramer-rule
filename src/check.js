@@ -41,6 +41,15 @@ function isMatrixOfNumbers(matrix) {
   return true
 }
 
+function isAugmentedMatrix(matrix) {
+
+  const m = matrix.length
+  const n = matrix[0].length
+
+  return m === n - 1
+}
+
 module.exports = {
-  isMatrixOfNumbers
+  isMatrixOfNumbers,
+  isAugmentedMatrix,
 }

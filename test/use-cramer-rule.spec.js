@@ -5,7 +5,8 @@ const { useCramerRule } = require('../')
 const {
   notMatrixArray,
   notMatrixOfNumbersArray,
-  
+  notAugmentedMatrixArray,
+
   assertThrowsCustomTypeError,
 } = require('./use-cramer-rule.fixture.js')
 
@@ -23,7 +24,11 @@ describe('useCramerRule():', () => {
     })
   })
 
-  it('should throw a custom type error if size of the passed matrix is not N x (N+1)')
+  it('should throw a custom type error if size of the passed matrix is not N x (N+1)', () => {
+    notAugmentedMatrixArray.forEach((matrix) => {
+      assertThrowsCustomTypeError(() => useCramerRule(matrix))
+    })
+  })
 
   it('should return null if the matrix of system equal to 0')
 

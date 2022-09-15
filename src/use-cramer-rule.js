@@ -1,4 +1,7 @@
-const { isMatrixOfNumbers } = require('./check')
+const {
+  isMatrixOfNumbers,
+  isAugmentedMatrix,
+} = require('./check')
 
 class NotMatrixOfNummbersError extends TypeError {
   constructor() {
@@ -6,10 +9,20 @@ class NotMatrixOfNummbersError extends TypeError {
   }
 }
 
+class NotAugmentedMatrixError extends TypeError {
+  constructor() {
+    super('Passed matrix must have size "N x (N + 1)"'
+  }
+}
+
 function useCramerRule(augmentedMatrix) {
 
   if (!isMatrixOfNumbers(augmentedMatrix)) {
     throw new NotMatrixOfNummbersError()
+  }
+
+  if (!isAugmentedMatrix(augmentedMatrix)) {
+    throw new NotAugmentedMatrixError()
   }
 }
 
