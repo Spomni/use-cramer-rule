@@ -78,6 +78,30 @@ const notOnceSolutionMatrixArray = [
   ]
 ]
 
+const rank2SystemArray = [
+  [
+    [
+      [1, 2, 3],
+      [3, 4, 5],
+    ],
+    [-1, 2]
+  ],
+  [
+    [
+      [-2, 4, 3],
+      [5, -1, 6],
+    ],
+    [1.5, 1.5]
+  ],
+  [
+    [
+      [2, 4, 4],
+      [-2, -3, -3]
+    ],
+    [0, 1]
+  ]
+]
+
 function assertThrowsCustomTypeError(func) {
   
   assert.throws(func, TypeError)
@@ -98,6 +122,8 @@ module.exports = {
   notAugmentedMatrixArray,
 
   notOnceSolutionMatrixArray,
+
+  rank2SystemArray,
 
   assertThrowsCustomTypeError,
 }
