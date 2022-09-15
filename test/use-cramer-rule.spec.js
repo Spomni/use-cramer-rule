@@ -7,6 +7,8 @@ const {
   notMatrixOfNumbersArray,
   notAugmentedMatrixArray,
 
+  notOnceSolutionMatrixArray,
+
   assertThrowsCustomTypeError,
 } = require('./use-cramer-rule.fixture.js')
 
@@ -30,7 +32,11 @@ describe('useCramerRule():', () => {
     })
   })
 
-  it('should return null if the matrix of system equal to 0')
+  it('should return null if the system matrix determinant equal to 0', () => {
+    notOnceSolutionMatrixArray.forEach((matrix) => {
+      assert.strictEqual(useCramerRule(matrix), null)
+    })
+  })
 
   it('should solve systems with rank 2')
   it('should solve systems with rank 3')
