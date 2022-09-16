@@ -102,6 +102,33 @@ const rank2SystemArray = [
   ]
 ]
 
+const rank3SystemArray = [
+  [
+    [
+      [-4, -5,  1, 3],
+      [-2,  2,  5, 5],
+      [-3,  4, -2, 2],
+    ],
+    [-52/63, 34/189, 113/189],
+  ],
+  [
+    [
+      [ 3, -5,  5,  3],
+      [-2,  0,  3,  4],
+      [-1, -2, -4, -2],
+    ],
+    [-24/31, -23/93, 76/93]
+  ],
+  [
+    [
+      [-4,  3, -3, -5],
+      [ 4, -2,  4, -5],
+      [ 4,  4, -5, -1],
+    ],
+    [3/20, -86/15, -64/15]
+  ]
+]
+
 function assertThrowsCustomTypeError(func) {
   
   assert.throws(func, TypeError)
@@ -124,6 +151,7 @@ module.exports = {
   notOnceSolutionMatrixArray,
 
   rank2SystemArray,
+  rank3SystemArray,
 
   assertThrowsCustomTypeError,
 }

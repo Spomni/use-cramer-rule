@@ -10,6 +10,7 @@ const {
   notOnceSolutionMatrixArray,
 
   rank2SystemArray,
+  rank3SystemArray,
 
   assertThrowsCustomTypeError,
 } = require('./use-cramer-rule.fixture.js')
@@ -46,6 +47,11 @@ describe('useCramerRule():', () => {
     })
   })
 
-  it('should solve systems with rank 3')
+  it('should solve systems with rank 3', () => {
+    rank3SystemArray.forEach(([matrix, solution]) => {
+      assert.deepEqual(useCramerRule(matrix), solution)
+    })
+  })
+
   it('should solve systems with any rank')
 })
