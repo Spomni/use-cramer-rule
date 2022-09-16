@@ -1,6 +1,6 @@
 {
   "name": "use-cramer-rule",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Solve a system of linear algebraic equations by Cramer's rule",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,16 @@
   },
   "author": "spomni",
   "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Spomni/use-cramer-rule"
+    
+  },
   "devDependencies": {
     "chai": "^4.3.6",
     "mocha": "^10.0.0"
+  },
+  "dependencies": {
+    "determinant": "github:spomni/determinant"
   }
 }
