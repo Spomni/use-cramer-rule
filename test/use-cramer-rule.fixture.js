@@ -129,6 +129,28 @@ const rank3SystemArray = [
   ]
 ]
 
+const anyRankSystemArray = [
+  [
+    [
+      [-3,  2, -3,  4,  0],
+      [-4,  0,  4,  0,  1],
+      [-4,  3, -3, -5, -4],
+      [ 0, -2,  5,  3, -1],
+    ],
+    [-377/24, -251/6, -371/24, -59/24]
+  ],
+  [
+    [
+      [0, 3, 2, 2, -4, -5],
+      [-2, 2, -4, 3, 5, 4],
+      [4, -4, -5, 0, -5, 2],
+      [3, -3, -4, -5, 4, 0],
+      [1, 2, -2, -2, 5, 1],
+    ],
+    [1808/261, -775/261, 313/87, 539/87, 341/87]
+  ]
+]
+
 function assertThrowsCustomTypeError(func) {
   
   assert.throws(func, TypeError)
@@ -152,6 +174,7 @@ module.exports = {
 
   rank2SystemArray,
   rank3SystemArray,
+  anyRankSystemArray,
 
   assertThrowsCustomTypeError,
 }
